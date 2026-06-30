@@ -1,1 +1,1728 @@
+/* ==========================================================
+   CIDADANIA DIGITAL E IA
+   STYLE.CSS - PARTE 1
+========================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root{
+
+    --bg:#060913;
+    --bg2:#0d1324;
+
+    --card:#131c31;
+    --card2:#1a2540;
+
+    --primary:#5b6cff;
+    --secondary:#30c7ff;
+    --purple:#8b5cf6;
+
+    --text:#f5f7ff;
+    --text2:#c4cee9;
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:18px;
+
+    --shadow:
+    0 10px 35px rgba(0,0,0,.35);
+
+    --transition:.35s ease;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(91,108,255,.18),
+    transparent 45%),
+
+    radial-gradient(circle at bottom right,
+    rgba(48,199,255,.12),
+    transparent 40%),
+
+    linear-gradient(180deg,
+    var(--bg),
+    #090f1d,
+    var(--bg));
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    line-height:1.8;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+.section{
+
+    padding:90px 0;
+
+}
+
+.alt-bg{
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    var(--bg2),
+
+    #0b1020);
+
+}
+
+.section-title{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    text-align:center;
+
+    font-size:2.8rem;
+
+    margin-bottom:20px;
+
+}
+
+.center-text{
+
+    text-align:center;
+
+    color:var(--text2);
+
+    max-width:850px;
+
+    margin:auto auto 45px;
+
+}
+
+/* =====================================
+            NAVBAR
+===================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(6,9,19,.75);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.nav-container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:1.8rem;
+
+    font-weight:800;
+
+    font-family:"Space Grotesk",sans-serif;
+
+}
+
+.logo span{
+
+    color:var(--secondary);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:22px;
+
+}
+
+.nav-links a{
+
+    color:var(--text2);
+
+    font-size:.95rem;
+
+    position:relative;
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:white;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:linear-gradient(
+
+    90deg,
+
+    var(--primary),
+
+    var(--secondary));
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+/* =====================================
+              HERO
+===================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding-top:90px;
+
+}
+
+.hero-content{
+
+    max-width:850px;
+
+}
+
+.hero h1{
+
+    font-family:"Space Grotesk";
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.hero h2{
+
+    font-size:1.6rem;
+
+    font-weight:500;
+
+    color:var(--secondary);
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:1.15rem;
+
+    color:var(--text2);
+
+    max-width:720px;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+}
+
+.btn-main{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:700;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    var(--primary),
+
+    var(--secondary));
+
+    transition:var(--transition);
+
+    box-shadow:
+
+    0 12px 35px
+
+    rgba(91,108,255,.35);
+
+}
+
+.btn-main:hover{
+
+    transform:
+
+    translateY(-5px)
+
+    scale(1.04);
+
+    box-shadow:
+
+    0 18px 40px
+
+    rgba(91,108,255,.5);
+
+}
+
+/* =====================================
+          GRID PADRÃO
+===================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+    gap:45px;
+
+    align-items:center;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+/* Cards base */
+
+.card,
+.callout-box,
+.tip-card,
+.secure-item{
+
+    background:
+
+    rgba(19,28,49,.85);
+
+    border:
+
+    1px solid var(--border);
+
+    border-radius:
+
+    var(--radius);
+
+    padding:28px;
+
+    backdrop-filter:blur(15px);
+
+    transition:var(--transition);
+
+}
+
+.card:hover,
+.callout-box:hover,
+.tip-card:hover,
+.secure-item:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    border-color:
+
+    rgba(91,108,255,.4);
+
+    box-shadow:
+
+    var(--shadow);
+
+}
+/*==========================================================
+        PARTE 2 - SEÇÕES E CARDS
+==========================================================*/
+
+/* ---------- PARÁGRAFOS ---------- */
+
+.section p{
+
+    color:var(--text2);
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+}
+
+.section strong{
+
+    color:white;
+
+}
+
+/* ---------- CALLOUT ---------- */
+
+.callout-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.callout-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    var(--primary),
+
+    var(--secondary)
+
+    );
+
+}
+
+.callout-box h3{
+
+    font-size:1.6rem;
+
+    margin-bottom:18px;
+
+    color:white;
+
+}
+
+.callout-box p{
+
+    color:var(--text2);
+
+}
+
+/* ---------- IMPACT CARDS ---------- */
+
+.impact-cards{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:45px;
+
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    rgba(91,108,255,.15),
+
+    transparent
+
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.card:hover::before{
+
+    opacity:1;
+
+}
+
+.card h4{
+
+    font-size:1.3rem;
+
+    margin-bottom:15px;
+
+    color:white;
+
+}
+
+.card p{
+
+    color:var(--text2);
+
+}
+
+/* Linha colorida */
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    var(--primary),
+
+    var(--secondary)
+
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+
+}
+
+.card:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/* ---------- TIP CARDS ---------- */
+
+.tip-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:default;
+
+}
+
+.tip-card h5{
+
+    font-size:1.15rem;
+
+    margin-bottom:15px;
+
+    color:white;
+
+}
+
+.tip-card p{
+
+    color:var(--text2);
+
+}
+
+.tip-card:hover{
+
+    transform:
+
+    translateY(-10px);
+
+}
+
+.tip-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    radial-gradient(
+
+    circle at top right,
+
+    rgba(48,199,255,.15),
+
+    transparent 60%
+
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.tip-card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ---------- GRID DAS DICAS ---------- */
+
+#identificar .grid-3{
+
+    margin-top:50px;
+
+}
+
+/* ---------- DESTAQUE DOS EMOJIS ---------- */
+
+.tip-card h5{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* ---------- TÍTULOS ---------- */
+
+.section-title{
+
+    position:relative;
+
+    display:inline-block;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    margin-bottom:25px;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:-12px;
+
+    width:90px;
+
+    height:4px;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    var(--primary),
+
+    var(--secondary)
+
+    );
+
+}
+
+/* ---------- ESPAÇAMENTO ---------- */
+
+#deepfakes{
+
+    padding-top:120px;
+
+}
+
+#desinformacao{
+
+    padding-top:100px;
+
+}
+
+#identificar{
+
+    padding-top:100px;
+
+}
+
+/* ---------- FUNDO DAS SEÇÕES ---------- */
+
+#deepfakes{
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    transparent,
+
+    rgba(91,108,255,.04)
+
+    );
+
+}
+
+#desinformacao{
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    rgba(255,255,255,.02),
+
+    rgba(0,0,0,.08)
+
+    );
+
+}
+
+#identificar{
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    transparent,
+
+    rgba(48,199,255,.03)
+
+    );
+
+}
+
+/* ---------- ANIMAÇÃO ---------- */
+
+.card,
+.tip-card,
+.callout-box{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+/*==========================================================
+            PARTE 3 - TIMELINE + SEGURANÇA
+==========================================================*/
+
+/* ===========================
+          TIMELINE
+=========================== */
+
+.timeline{
+
+    position:relative;
+
+    margin-top:60px;
+
+    padding-left:40px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:22px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:30px;
+
+    margin-bottom:45px;
+
+}
+
+.timeline-item:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* Bolinha */
+
+.timeline-date{
+
+    min-width:48px;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    color:white;
+
+    box-shadow:
+
+        0 0 20px rgba(91,108,255,.45);
+
+    z-index:5;
+
+}
+
+/* Caixa */
+
+.timeline-content{
+
+    flex:1;
+
+    background:
+
+        rgba(19,28,49,.85);
+
+    border:
+
+        1px solid var(--border);
+
+    border-radius:
+
+        var(--radius);
+
+    padding:28px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.timeline-content:hover{
+
+    transform:
+
+        translateY(-6px);
+
+    border-color:
+
+        rgba(91,108,255,.4);
+
+    box-shadow:
+
+        var(--shadow);
+
+}
+
+.timeline-content h4{
+
+    font-size:1.35rem;
+
+    margin-bottom:12px;
+
+    color:white;
+
+}
+
+.timeline-content p{
+
+    color:var(--text2);
+
+}
+
+/* Barra colorida */
+
+.timeline-content::before{
+
+    content:"";
+
+    display:block;
+
+    width:65px;
+
+    height:4px;
+
+    margin-bottom:18px;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--primary),
+
+            var(--secondary)
+
+        );
+
+}
+
+/* ===========================
+        SEGURANÇA DIGITAL
+=========================== */
+
+#seguranca .grid-3{
+
+    margin-top:55px;
+
+}
+
+.secure-item{
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.secure-item:hover{
+
+    transform:
+
+        translateY(-8px);
+
+}
+
+.secure-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(48,199,255,.15),
+
+        transparent 70%
+
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.secure-item:hover::before{
+
+    opacity:1;
+
+}
+
+/* Ícone */
+
+.icon{
+
+    width:75px;
+
+    height:75px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(91,108,255,.25),
+
+            rgba(48,199,255,.18)
+
+        );
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+}
+
+.secure-item h4{
+
+    font-size:1.2rem;
+
+    margin-bottom:12px;
+
+}
+
+.secure-item p{
+
+    color:var(--text2);
+
+}
+
+/* Barra inferior */
+
+.secure-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--primary),
+
+            var(--secondary)
+
+        );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+}
+
+.secure-item:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/* ===========================
+        EFEITOS GERAIS
+=========================== */
+
+.timeline-item,
+.secure-item{
+
+    animation:fadeUp .7s ease both;
+
+}
+
+/* Pequeno brilho ao passar o mouse */
+
+.timeline-content:hover h4,
+.secure-item:hover h4{
+
+    color:
+
+        var(--secondary);
+
+    transition:.3s;
+
+}
+/*==========================================================
+            PARTE 4 - FOOTER + RESPONSIVIDADE
+==========================================================*/
+
+/* ===========================
+            FOOTER
+=========================== */
+
+footer{
+
+    background:
+    linear-gradient(
+        180deg,
+        #060913,
+        #04070d
+    );
+
+    border-top:1px solid var(--border);
+
+    padding:70px 0 35px;
+
+    text-align:center;
+
+}
+
+.footer-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.footer-content p{
+
+    color:var(--text2);
+
+}
+
+.footer-links{
+
+    margin:15px 0;
+
+}
+
+.footer-links a{
+
+    color:var(--secondary);
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:white;
+
+}
+
+/* ===========================
+        BOTÃO TOPO
+=========================== */
+
+#back-to-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+
+        0 10px 30px rgba(91,108,255,.45);
+
+    transition:.35s;
+
+}
+
+#back-to-top:hover{
+
+    transform:
+
+        translateY(-6px)
+        scale(1.05);
+
+}
+
+/* ===========================
+      SELEÇÃO DE TEXTO
+=========================== */
+
+::selection{
+
+    background:
+
+        var(--primary);
+
+    color:white;
+
+}
+
+/* ===========================
+        SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08101f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+
+        linear-gradient(
+
+            var(--primary),
+
+            var(--secondary)
+
+        );
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+      RESPONSIVIDADE
+=========================== */
+
+@media(max-width:1100px){
+
+.grid-2{
+
+grid-template-columns:1fr;
+
+}
+
+.grid-3{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.impact-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero h1{
+
+font-size:3.2rem;
+
+}
+
+}
+
+/* Tablet */
+
+@media(max-width:850px){
+
+.menu-toggle{
+
+display:block;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero h1{
+
+font-size:2.6rem;
+
+}
+
+.hero h2{
+
+font-size:1.25rem;
+
+}
+
+.section{
+
+padding:70px 0;
+
+}
+
+.timeline{
+
+padding-left:20px;
+
+}
+
+.timeline::before{
+
+left:16px;
+
+}
+
+.timeline-item{
+
+gap:20px;
+
+}
+
+.timeline-date{
+
+width:42px;
+
+height:42px;
+
+min-width:42px;
+
+font-size:.85rem;
+
+}
+
+.grid-3{
+
+grid-template-columns:1fr;
+
+}
+
+.impact-cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* Celular */
+
+@media(max-width:600px){
+
+.logo{
+
+font-size:1.45rem;
+
+}
+
+.hero h1{
+
+font-size:2rem;
+
+}
+
+.hero h2{
+
+font-size:1.05rem;
+
+}
+
+.hero p{
+
+font-size:.95rem;
+
+}
+
+.section-title{
+
+font-size:2rem;
+
+}
+
+.card,
+.tip-card,
+.callout-box,
+.secure-item,
+.timeline-content{
+
+padding:22px;
+
+}
+
+.btn-main{
+
+padding:14px 28px;
+
+font-size:.95rem;
+
+}
+
+.timeline{
+
+padding-left:10px;
+
+}
+
+.timeline::before{
+
+left:12px;
+
+}
+
+.timeline-date{
+
+width:38px;
+
+height:38px;
+
+min-width:38px;
+
+font-size:.75rem;
+
+}
+
+#back-to-top{
+
+width:48px;
+
+height:48px;
+
+font-size:20px;
+
+right:18px;
+
+bottom:18px;
+
+}
+
+}
+
+/* ===========================
+      ANIMAÇÕES SUAVES
+=========================== */
+
+.hero-content{
+
+animation:fadeHero 1s ease;
+
+}
+
+@keyframes fadeHero{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+.section{
+
+animation:fadeSection .8s ease;
+
+}
+
+@keyframes fadeSection{
+
+from{
+
+opacity:.2;
+
+transform:
+
+translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* ===========================
+      ACABAMENTOS
+=========================== */
+
+.card,
+.tip-card,
+.callout-box,
+.secure-item,
+.timeline-content{
+
+transition:
+
+transform .35s ease,
+
+box-shadow .35s ease,
+
+border-color .35s ease;
+
+}
+
+.section-title{
+
+letter-spacing:.5px;
+
+}
+
+p{
+
+text-wrap:pretty;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
